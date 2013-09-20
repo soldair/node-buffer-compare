@@ -16,3 +16,10 @@ test("can compare",function(t){
   t.equals(compare(Buffer(''),Buffer('a')),-1,' empty b < b')
   t.end();
 })
+
+
+test("sorts correctly with null bytes at end",function(t){
+  
+  t.equals(compare(new Buffer("hi\x00"),new Buffer("hi")),1,"should match 1 if last is a null byte and compare to is one shorter")
+  t.end();
+})
