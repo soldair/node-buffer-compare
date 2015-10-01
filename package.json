@@ -1,7 +1,7 @@
 {
   "name": "buffer-compare",
   "description": "Lexicographically compare two buffers. ",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "keywords":["sort","buffer","lexiographic"],
   "repository": {
     "url": "git://github.com/soldair/node-buffer-compare.git"
