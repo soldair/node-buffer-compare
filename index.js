@@ -1,6 +1,6 @@
-
-
 module.exports = function(cmp,to){
+  if (typeof a.compare === 'function') return a.compare(b);
+
   var c = 0;
   for(var i=0;i<cmp.length;++i){
     if(i == to.length) break;
