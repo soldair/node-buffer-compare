@@ -1,16 +1,24 @@
+module.exports = function(a, b) {
+  if (a === b) return 0
 
+  var x = a.length
+  var y = b.length
 
-module.exports = function(cmp,to){
-  var c = 0;
-  for(var i=0;i<cmp.length;++i){
-    if(i == to.length) break;
-    c = cmp[i] < to[i]?-1:cmp[i] > to[i]?1:0;    
-    if(c != 0) break;
+  var i = 0
+  var len = Math.min(x, y)
+  while (i < len) {
+    if (a[i] !== b[i]) break
+
+    ++i
   }
-  if(c == 0){
-    if(to.length > cmp.length) c = -1;
-    else if(cmp.length > to.length) c = 1;
+
+  if (i !== len) {
+    x = a[i]
+    y = b[i]
   }
-  return c;
+
+  if (x < y) return -1
+  if (y < x) return 1
+  return 0
 }
 
