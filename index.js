@@ -1,4 +1,5 @@
 module.exports = function(a, b) {
+  if (typeof a.compare === 'function') return a.compare(b)
   if (a === b) return 0
 
   var x = a.length
