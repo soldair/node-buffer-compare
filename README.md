@@ -10,7 +10,7 @@ Lexicographically compare two buffers.
   var compare = require('buffer-compare');
 
   // smaller
-  compare(new Buffer('abcd'),new Buffer(abcde)) === -1
+  compare(new Buffer('abcd'),new Buffer('abcde')) === -1
 
   // bigger
   compare(new Buffer('abcdef'),new Buffer('abc')) === 1
